@@ -6,5 +6,5 @@ RUN npm i
 COPY . . 
 # Build production image
 FROM dependencies as builder
-EXPOSE 3000
+EXPOSE 8080
 CMD npm run start
