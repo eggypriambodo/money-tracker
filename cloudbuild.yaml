@@ -12,6 +12,7 @@ steps:
       - "DB_PASS=projektcc"
       - "INSTANCE_CONNECTION_NAME=tugas-akhir-praktcc:us-central1:money-tracker-db"
       - "NODE_ENV=value: production"
+      - "PORT=8080"
 
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
