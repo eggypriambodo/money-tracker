@@ -5,6 +5,14 @@ steps:
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/be-mtrack:$COMMIT_SHA"]
+    env:
+      - "DB_HOST=104.198.38.230"
+      - "DB_NAME=mymoney"
+      - "DB_USER=root"
+      - "DB_PASS=projektcc"
+      - "INSTANCE_CONNECTION_NAME=tugas-akhir-praktcc:us-central1:money-tracker-db"
+      - "NODE_ENV=value: production"
+
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
@@ -19,16 +27,3 @@ steps:
       - "asia-southeast1"
 images:
   - "gcr.io/$PROJECT_ID/be-mtrack:$COMMIT_SHA"
-  env:
-  - name: DB_HOST
-    value: 104.198.38.230
-  - name: DB_NAME
-    value: mymoney
-  - name: DB_USER
-    value: root
-  - name: DB_PASS
-    value: projektcc
-  - name: INSTANCE_CONNECTION_NAME
-    value: tugas-akhir-praktcc:us-central1:money-tracker-db
-  - name: NODE_ENV
-    value: production
