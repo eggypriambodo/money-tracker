@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const router = express.Router();
 const Multer = require("multer");
 const imgUpload = require("../modules/imgUpload");
-const connection = require("../database");
+const connection = require("database.js");
 
 const multer = Multer({
   storage: Multer.MemoryStorage,
