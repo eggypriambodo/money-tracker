@@ -25,7 +25,7 @@ else {
   config.host = DB_HOST;
 }
 
-let connection = mysql.createConnection(config);
+//let connection = mysql.createConnection(config);
 
 connection.connect(function (err) {
   if (err) {
