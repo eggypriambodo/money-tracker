@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 
 const recordRouter = require("./routes/record");
 
+const HOST = "0.0.0.0";
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(recordRouter);
 
@@ -15,6 +17,6 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log("Server is up and listening on " + PORT);
 });
