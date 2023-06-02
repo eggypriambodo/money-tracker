@@ -14,6 +14,7 @@ steps:
       - "be-mtrack"
       - "--image"
       - "gcr.io/$PROJECT_ID/be-mtrack:$COMMIT_SHA"
+      - "--allow-unauthenticated"
       - "--region"
       - "asia-southeast1"
 images:
