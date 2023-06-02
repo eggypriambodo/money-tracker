@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
   console.log("Server is up and listening on " + PORT);
 });
