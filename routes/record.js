@@ -7,7 +7,7 @@ const connection = require("../database");
 
 ("use strict");
 
-const createTcpPool = require("./connect-tcp.js");
+const createTcpPool = require("../connect-tcp.js");
 
 const app = express();
 app.set("view engine", "pug");
