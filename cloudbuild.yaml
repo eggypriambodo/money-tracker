@@ -19,3 +19,16 @@ steps:
       - "asia-southeast1"
 images:
   - "gcr.io/$PROJECT_ID/be-mtrack:$COMMIT_SHA"
+  env:
+  - name: DB_HOST
+    value: 104.198.38.230
+  - name: DB_NAME
+    value: mymoney
+  - name: DB_USER
+    value: root
+  - name: DB_PASS
+    value: projektcc
+  - name: INSTANCE_CONNECTION_NAME
+    value: tugas-akhir-praktcc:us-central1:money-tracker-db
+  - name: NODE_ENV
+    value: production
